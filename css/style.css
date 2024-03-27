@@ -1,7 +1,6 @@
 /* ------------------------
            RESET
 ------------------------ */
-
 * {
     padding: 0;
     margin: 0;
@@ -9,15 +8,14 @@
 }
 
 body {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
 /* ------------------------
            STYLE
 ------------------------ */
 /* HEADER */
 header {background-color: #2E2A23;}
 
-.header{
-    height: 80px;
-}
+.header{height: 80px;}
 
 h1 {
     font-size: 40px;
@@ -31,6 +29,7 @@ h1 {
 main {border-color: #d4d4d4;}
 
 .container {
+    position: relative;
     height: calc(100vh - 80px - 50px);
     padding: 25px 0;
     width: 90%;
@@ -56,7 +55,32 @@ footer {background-color: #2E2A23; border-top: 1px solid black;}
     text-align: center;
 }
 
+.overlay {
+    position: absolute;
+    left: 0px;
+    top: 25px;
+    padding: 25px 0;
+    height: 91.5%;
+    width: 100%;
+    background-color: #000000b3;
+    border-radius: 15px;
+    border: 1px solid #000;
+    opacity: 0;
+    transition: 0.5s;
+}
 
+.overlay h2 {
+    font-size: 35px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container:hover .overlay {opacity: 1;}
+
+.overlay h2::after {color: gold; content: '\0270C'; font-size: 50px;}
 
 /* ------------------------
            LAYOUT
@@ -67,5 +91,5 @@ footer {background-color: #2E2A23; border-top: 1px solid black;}
 ------------------------ */
 
 /* ------------------------
-     BACKGROUND & COLOR
+    BACKGROUND & COLOR
 ------------------------ */
